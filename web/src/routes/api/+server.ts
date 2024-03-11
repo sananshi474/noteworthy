@@ -2,14 +2,15 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import OpenAI from 'openai';
 import { Pinecone } from '@pinecone-database/pinecone';
+import { PINECONE_API, OPENAI_API } from '$env/static/private';
 
 const openai = new OpenAI({
-    apiKey: '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',
+    apiKey: OPENAI_API,
     dangerouslyAllowBrowser: true
 });
 
 const pc = new Pinecone({
-    apiKey: 'd288e59a-5285-4c3f-a02f-fc98be060536'
+    apiKey: PINECONE_API
 });
 
 const index = pc.Index("prima-test", "https://prima-test-bv8irtr.svc.apw5-4e34-81fa.pinecone.io")

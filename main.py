@@ -1,10 +1,10 @@
 from pinecone import Pinecone
-pc=Pinecone(api_key="d288e59a-5285-4c3f-a02f-fc98be060536")
+pc=Pinecone(api_key="REDACTED")
 
 from openai import OpenAI
-client=OpenAI(api_key="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")
+client=OpenAI(api_key="REDACTED")
 
-index = pc.Index(host="https://prima-test-bv8irtr.svc.apw5-4e34-81fa.pinecone.io")
+index = pc.Index(host="REDACTED")
 
 data = [
         {
