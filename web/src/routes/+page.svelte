@@ -2,12 +2,8 @@
 
 	let buttonState: boolean = false;
 
-	import { Pinecone } from '@pinecone-database/pinecone';
 	import { onMount } from 'svelte';
 
-	const pc = new Pinecone({
-		apiKey: import.meta.env.VITE_PINECONE_API_KEY
-	});
 	async function queryInput(input: string) {
 		buttonState = true;
 		const myHeaders = new Headers();
