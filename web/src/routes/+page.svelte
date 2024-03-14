@@ -2,7 +2,7 @@
 	import OpenAI from 'openai';
 
 	const openai = new OpenAI({
-		apiKey: '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',
+		apiKey: import.meta.env.VITE_OPENAI_API_KEY,
 		dangerouslyAllowBrowser: true
 	});
 
@@ -12,7 +12,7 @@
 	import { onMount } from 'svelte';
 
 	const pc = new Pinecone({
-		apiKey: 'd288e59a-5285-4c3f-a02f-fc98be060536'
+		apiKey: import.meta.env.VITE_PINECONE_API_KEY
 	});
 	async function queryInput(input: string) {
 		buttonState = true;
